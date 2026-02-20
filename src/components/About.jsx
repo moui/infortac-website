@@ -6,7 +6,7 @@ const TEAM = [
     name: 'Pablo Barrera',
     role: 'Director y Responsable Técnico',
     description:
-      'Con más de 35 años dedicados al transporte de pasajeros y carga, Pablo fundó Infortac tras una destacada carrera en empresas como ONDA y UCM. Su experiencia es la base de cada análisis que realizamos.',
+      'Con más de 40 años dedicados al transporte de pasajeros y carga, Pablo fundó Infortac tras una destacada carrera en empresas como ONDA y UCM. Su experiencia es la base de cada análisis que realizamos.',
     image: null,
   },
   {
@@ -47,7 +47,7 @@ export default function About() {
             Una empresa familiar, un compromiso profesional
           </h2>
           <p className="mt-4 text-lg text-gray-600 leading-relaxed">
-            Hace más de 25 años que acompañamos a las empresas de transporte de Uruguay. Nacimos como un emprendimiento familiar y crecimos manteniendo lo que nos distingue: cercanía, confianza y un servicio de calidad.
+            Hace más de 30 años que acompañamos a las empresas de transporte de Uruguay. Nacimos como un emprendimiento familiar y crecimos manteniendo lo que nos distingue: cercanía, confianza y un servicio de calidad.
           </p>
         </div>
 
@@ -89,7 +89,7 @@ export default function About() {
             </h3>
             <ul className="space-y-3 sm:space-y-4">
               {[
-                'Más de 35 años de trayectoria ininterrumpida en el rubro.',
+                'Más de 40 años de trayectoria ininterrumpida en el rubro.',
                 'Absoluta discreción y confidencialidad en el manejo de datos.',
                 'Fiscalización externa: sin contacto directo con los choferes.',
                 'Información procesada y convertida en indicadores de gestión.',

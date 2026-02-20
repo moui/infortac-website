@@ -8,7 +8,7 @@ const SERVICES = [
     description:
       'Nuestro servicio principal. Realizamos la lectura, procesamiento y análisis integral de los datos registrados en cada disco de tacógrafo. Verificamos el cumplimiento de las normativas del MTOP y las políticas internas de su empresa, con total confidencialidad.',
     details: [
-      'Lectura profesional con más de 35 años de experiencia',
+      'Lectura profesional con más de 40 años de experiencia',
       'Distancia recorrida, velocidad promedio y máxima',
       'Detección de aceleraciones y frenadas bruscas',
       'Registro de tiempos de ralentí, descanso e interrupciones',
@@ -124,7 +124,7 @@ export default function Services() {
         {/* Stats bar */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
           {[
-            { value: '35+', label: 'Años de trayectoria' },
+            { value: '40+', label: 'Años de trayectoria' },
             { value: '100%', label: 'Confidencialidad' },
             { value: 'Semanal', label: 'Retiro de discos' },
             { value: '50+', label: 'Empresas atendidas' },

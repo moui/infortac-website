@@ -17,7 +17,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
         <span className="inline-block px-4 py-1.5 mb-6 text-xs sm:text-sm font-semibold tracking-wider uppercase bg-white/15 backdrop-blur-sm text-white rounded-full border border-white/20">
-          Más de 35 años al servicio del transporte
+          Más de 40 años al servicio del transporte
         </span>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight">

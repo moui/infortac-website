@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Services from './components/Services'
+import Tacografos from './components/Tacografos'
 import Products from './components/Products'
 import About from './components/About'
 import Contact from './components/Contact'
@@ -10,11 +11,14 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <Hero />
-      <Services />
-      <Products />
-      <About />
-      <Contact />
+      <main>
+        <Hero />
+        <Services />
+        <Tacografos />
+        <Products />
+        <About />
+        <Contact />
+      </main>
       <Footer />
     </div>
   )

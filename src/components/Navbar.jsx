@@ -4,6 +4,7 @@ import { Menu, X } from 'lucide-react'
 const NAV_LINKS = [
   { label: 'Inicio', href: '#inicio' },
   { label: 'Servicios', href: '#servicios' },
+  { label: 'Tacógrafos', href: '#tacografos' },
   { label: 'Productos', href: '#productos' },
   { label: 'Nosotros', href: '#nosotros' },
   { label: 'Contacto', href: '#contacto' },
@@ -21,6 +22,7 @@ export default function Navbar() {
 
   return (
     <nav
+      aria-label="Navegación principal"
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
           ? 'bg-white/95 backdrop-blur-md shadow-lg'

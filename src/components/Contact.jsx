@@ -53,18 +53,18 @@ export default function Contact() {
   }
 
   return (
-    <section id="contacto" className="py-20 sm:py-28 bg-white">
+    <section id="contacto" className="py-20 sm:py-28 bg-white" aria-labelledby="contacto-title">
       <div ref={ref} className="fade-in-section max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-3 py-1 text-xs font-semibold tracking-wider uppercase text-primary-600 bg-primary-100 rounded-full">
             Contacto
           </span>
-          <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
-            Hablemos
+          <h2 id="contacto-title" className="mt-4 text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
+            Estamos para ayudarte
           </h2>
           <p className="mt-4 text-lg text-gray-600 leading-relaxed">
-            ¿Tenés consultas sobre nuestros servicios o querés encargar productos? Escribinos y te respondemos a la brevedad.
+            ¿Consultas sobre análisis de tacógrafos, control de flota o productos DML? Escribínos y te respondemos a la brevedad.
           </p>
         </div>
 
@@ -102,6 +102,7 @@ export default function Contact() {
                 height="250"
                 src="https://maps.google.com/maps?hl=es&amp;ie=UTF8&amp;ll=-34.8381361,-55.9833471&amp;spn=0.05,0.05&amp;t=m&amp;z=14&amp;output=embed"
                 className="w-full border-0 overflow-hidden"
+                loading="lazy"
               />
             </div>
           </div>
@@ -169,7 +170,7 @@ export default function Contact() {
                   required
                   rows={6}
                   className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-all resize-none text-gray-900"
-                  placeholder="Contanos cómo podemos ayudarte, o incluí tu pedido de productos..."
+                  placeholder="Contanos cómo podemos ayudarte: consultas sobre servicios, pedidos de discos de tacógrafo, papel térmico..."
                 />
               </div>
 

@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-extrabold tracking-tight">Infortac</h3>
             <p className="mt-3 text-sm text-primary-200 leading-relaxed max-w-xs">
-              Soluciones integrales para empresas de transporte de carga y pasajeros. Análisis de tacógrafos, control de flotas y productos DML.
+              Especialistas en lectura y procesamiento de discos de tacógrafo, control de flotas, rastreo satelital y productos DML para el transporte en Uruguay.
             </p>
           </div>
 
@@ -22,6 +22,7 @@ export default function Footer() {
               {[
                 { label: 'Inicio', href: '#inicio' },
                 { label: 'Servicios', href: '#servicios' },
+                { label: 'Tacógrafos', href: '#tacografos' },
                 { label: 'Productos', href: '#productos' },
                 { label: 'Nosotros', href: '#nosotros' },
                 { label: 'Contacto', href: '#contacto' },

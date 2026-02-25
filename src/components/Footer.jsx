@@ -48,8 +48,8 @@ export default function Footer() {
               <p>Río de Janeiro M. 124 S. 4</p>
               <p>Lagomar, Canelones, Uruguay</p>
               <p>
-                <a href="tel:+59826827509" className="hover:text-white transition-colors">
-                  (+598) 2682-7509
+                <a href="https://wa.me/59894562495" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  (+598) 94-562-495
                 </a>
               </p>
               <p>

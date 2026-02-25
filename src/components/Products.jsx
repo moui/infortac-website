@@ -39,13 +39,13 @@ const PRODUCTS = [
     packaging: 'Caja: 10 conjuntos de 7 discos',
   },
   {
-    id: 'DML Papel Térmico',
-    name: 'Rollos de papel térmico',
-    image: '/images/papeles.jpg',
+    id: 'DML BVDR',
+    name: 'Rollo Bobina para Tacógrafo BVDR',
+    image: '/images/bobina-bvdr.jpg',
     scale: null,
     divisions: null,
-    application: 'Para POS, ticketeras y tacógrafos digitales',
-    packaging: 'Alto rendimiento — calidad garantizada para impresión duradera',
+    application: 'Bobina/rollo DML para tacógrafo digital, presentación en 10 y 20 unidades',
+    packaging: 'Compatible con tacógrafos digitales BVDR',
   },
 ]
 
@@ -64,7 +64,7 @@ export default function Products() {
             Distribuidor autorizado en Uruguay
           </h2>
           <p className="mt-4 text-lg text-gray-600 leading-relaxed">
-            Comercializamos discos de tacógrafo y rollos de papel térmico de la reconocida marca brasileña DML — calidad certificada y stock permanente.
+            Comercializamos discos de tacógrafo y bobinas de la reconocida marca brasileña DML — calidad certificada y stock permanente.
           </p>
         </div>
 
@@ -113,7 +113,7 @@ export default function Products() {
         {/* CTA */}
         <div className="mt-12 bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 sm:p-10 text-center text-white">
           <Truck className="mx-auto mb-4" size={40} />
-          <h3 className="text-xl sm:text-2xl font-bold">¿Necesitás discos de tacógrafo o papel térmico?</h3>
+          <h3 className="text-xl sm:text-2xl font-bold">¿Necesitás discos de tacógrafo?</h3>
           <p className="mt-2 text-primary-100 max-w-lg mx-auto text-sm sm:text-base">
             Hacé tu pedido online y coordinamos el envío. <strong>Montevideo y Ciudad de la Costa: ¡envío sin costo!</strong>
           </p>

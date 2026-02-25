@@ -17,12 +17,12 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
         <span className="inline-block px-4 py-1.5 mb-6 text-xs sm:text-sm font-semibold tracking-wider uppercase bg-white/15 backdrop-blur-sm text-white rounded-full border border-white/20">
-          Más de 40 años al servicio del transporte
+          Más de 35 años al servicio del transporte
         </span>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight">
-          Control y procesamiento de{' '}
-          <span className="text-accent-500">discos de tacógrafo</span>
+          Control de discos de tacógrafo y{' '}
+          <span className="text-accent-500">procesamiento de datos</span>
         </h1>
 
         <p className="mt-6 text-lg sm:text-xl md:text-2xl text-white/85 max-w-3xl mx-auto leading-relaxed">

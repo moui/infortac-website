@@ -1,14 +1,14 @@
-import { Disc3, Satellite, Eye, SlidersHorizontal } from 'lucide-react'
+import { Disc3, Satellite, SlidersHorizontal } from 'lucide-react'
 import { useFadeIn } from '../hooks/useFadeIn'
 
 const SERVICES = [
   {
     icon: Disc3,
-    title: 'Control y Procesamiento de Discos de Tacógrafo',
+    title: 'Control de Tacógrafo',
     description:
-      'Nuestro servicio principal. Realizamos la lectura, procesamiento y análisis integral de los datos registrados en cada disco de tacógrafo. Verificamos el cumplimiento de las normativas del MTOP y las políticas internas de su empresa, con total confidencialidad.',
+      'Nuestro servicio principal. Realizamos la lectura, procesamiento y análisis integral de los datos registrados de los tacógrafos. Verificamos el cumplimiento de las normativas del MTOP y las políticas internas de su empresa, con total confidencialidad.',
     details: [
-      'Lectura profesional con más de 40 años de experiencia',
+      'Lectura profesional con más de 35 años de experiencia',
       'Distancia recorrida, velocidad promedio y máxima',
       'Detección de aceleraciones y frenadas bruscas',
       'Registro de tiempos de ralentí, descanso e interrupciones',
@@ -21,25 +21,12 @@ const SERVICES = [
     icon: Satellite,
     title: 'Análisis de Información Satelital',
     description:
-      'Para empresas que cuentan con rastreo GPS, procesamos y analizamos la información de sus dispositivos para convertir datos crudos en indicadores claros y accionables, sin importar el proveedor del sistema.',
+      'Para empresas que cuentan con rastreo GPS o plataforma VDO On Board, procesamos y analizamos la información de sus dispositivos para convertir datos crudos en indicadores claros y accionables, sin importar el proveedor del sistema.',
     details: [
       'Procesamiento de datos de cualquier proveedor GPS',
       'Análisis de rutas, paradas y desvíos',
       'Indicadores de eficiencia operativa y consumo',
       'Reportes periódicos con información relevante para la gestión',
-    ],
-    highlighted: false,
-  },
-  {
-    icon: Eye,
-    title: 'Seguimiento Presencial de Flota',
-    description:
-      'Control in situ del comportamiento de la flota, con documentación fotográfica y en video. Una herramienta valiosa para auditorías, resolución de reclamos y verificación del cumplimiento operativo.',
-    details: [
-      'Documentación con video e imágenes de cada recorrido',
-      'Informes detallados de hallazgos y observaciones',
-      'Verificación presencial de rutas y procedimientos',
-      'Evidencia documental para auditorías y juicios laborales',
     ],
     highlighted: false,
   },
@@ -122,12 +109,10 @@ export default function Services() {
         </div>
 
         {/* Stats bar */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+        <div className="mt-16 grid grid-cols-2 gap-4 sm:gap-6 max-w-lg mx-auto">
           {[
-            { value: '40+', label: 'Años de trayectoria' },
+            { value: '35+', label: 'Años de trayectoria' },
             { value: '100%', label: 'Confidencialidad' },
-            { value: 'Semanal', label: 'Retiro de discos' },
-            { value: '50+', label: 'Empresas atendidas' },
           ].map(({ value, label }) => (
             <div
               key={label}

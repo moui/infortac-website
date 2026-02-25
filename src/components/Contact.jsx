@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
+import { MapPin, Phone, Mail, Send } from 'lucide-react'
 import { useFadeIn } from '../hooks/useFadeIn'
 
 const CONTACT_INFO = [
@@ -11,27 +11,15 @@ const CONTACT_INFO = [
   },
   {
     icon: Phone,
-    label: 'Teléfono',
-    value: '(+598) 2682-7509',
-    href: 'tel:+59826827509',
-  },
-  {
-    icon: Phone,
     label: 'Celular',
     value: '(+598) 94-562-495',
-    href: 'tel:+59894562495',
+    href: 'https://wa.me/59894562495',
   },
   {
     icon: Mail,
     label: 'Email',
     value: 'infortac@adinet.com.uy',
     href: 'mailto:infortac@adinet.com.uy',
-  },
-  {
-    icon: Clock,
-    label: 'Horario',
-    value: 'Lunes a Viernes: 9:00 – 17:00',
-    href: null,
   },
 ]
 
@@ -170,7 +158,7 @@ export default function Contact() {
                   required
                   rows={6}
                   className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-all resize-none text-gray-900"
-                  placeholder="Contanos cómo podemos ayudarte: consultas sobre servicios, pedidos de discos de tacógrafo, papel térmico..."
+                  placeholder="Contanos cómo podemos ayudarte: consultas sobre servicios, pedidos de discos de tacógrafo..."
                 />
               </div>
 

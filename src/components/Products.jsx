@@ -5,7 +5,7 @@ const PRODUCTS = [
   {
     id: 'DML 001',
     name: 'Disco Diagrama 7 días',
-    image: '/images/discos001.jpg',
+    image: '/images/discos001.webp',
     scale: '125 Km/h',
     divisions: '20×20 Km/h',
     application: 'Disco semanal para tacógrafo analógico de 125 Km/h',
@@ -23,7 +23,7 @@ const PRODUCTS = [
   {
     id: 'DML 005',
     name: 'Disco Diagrama 24 horas',
-    image: '/images/discos005.jpg',
+    image: '/images/discos005.webp',
     scale: '180 Km/h',
     divisions: '20×20 Km/h',
     application: 'Disco diario para tacógrafo analógico de 180 Km/h',
@@ -32,7 +32,7 @@ const PRODUCTS = [
   {
     id: 'DML 006',
     name: 'Disco Diagrama 7 días',
-    image: '/images/discos006.jpg',
+    image: '/images/discos006.webp',
     scale: '180 Km/h',
     divisions: '20×20 Km/h',
     application: 'Disco semanal para tacógrafo analógico de 180 Km/h',
@@ -41,7 +41,7 @@ const PRODUCTS = [
   {
     id: 'DML BVDR',
     name: 'Rollo Bobina para Tacógrafo BVDR',
-    image: '/images/bobina-bvdr.jpg',
+    image: '/images/bobina-bvdr.webp',
     scale: null,
     divisions: null,
     application: 'Bobina/rollo DML para tacógrafo digital, presentación en 10 y 20 unidades',
@@ -79,8 +79,9 @@ export default function Products() {
                 <img
                   src={image}
                   alt={`${id} — ${name}`}
-                  className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
+                  className="h-full w-full object-contain group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="p-5 sm:p-6">
@@ -104,7 +105,7 @@ export default function Products() {
                   </div>
                 )}
 
-                <p className="mt-3 text-xs text-gray-400">{packaging}</p>
+                <p className="mt-3 text-xs text-gray-600">{packaging}</p>
               </div>
             </article>
           ))}
@@ -119,6 +120,9 @@ export default function Products() {
           </p>
           <a
             href="#contacto"
+            data-analytics-event="cta_click"
+            data-action="request_products"
+            data-placement="products"
             className="inline-block mt-6 px-8 py-3 bg-white text-primary-700 font-semibold rounded-xl hover:bg-primary-50 transition-colors shadow-lg"
           >
             Solicitar productos

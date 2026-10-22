@@ -9,11 +9,11 @@ export default function About() {
       <div ref={ref} className="fade-in-section max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-3 py-1 text-xs font-semibold tracking-wider uppercase text-primary-600 bg-primary-100 rounded-full">
+          <h2 id="nosotros-title" className="inline-block px-3 py-1 text-xs font-semibold tracking-wider uppercase text-primary-600 bg-primary-100 rounded-full">
             Nosotros
-          </span>
+          </h2>
           <p className="mt-4 text-lg text-gray-600 leading-relaxed">
-            Hace más de 30 años que acompañamos a las empresas de transporte de Uruguay. Nacimos como un emprendimiento familiar y crecimos manteniendo lo que nos distingue: cercanía, confianza y un servicio de calidad.
+            Hace más de 35 años que acompañamos a las empresas de transporte de Uruguay. Nacimos como un emprendimiento familiar y crecimos manteniendo lo que nos distingue: cercanía, confianza y un servicio de calidad.
           </p>
         </div>
 

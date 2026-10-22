@@ -19,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
@@ -29,6 +30,10 @@ body {
 
 /* Fade-in animation for scroll-triggered elements */
 .fade-in-section {
+  opacity: 1;
+}
+
+.fade-in-section.will-animate {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.7s ease-out, transform 0.7s ease-out;
@@ -37,4 +42,23 @@ body {
 .fade-in-section.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-primary-500);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .fade-in-section.will-animate {
+    opacity: 1;
+    transform: none;
+  }
 }

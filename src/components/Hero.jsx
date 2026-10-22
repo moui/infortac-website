@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden"
+      className="relative min-h-[100svh] py-28 sm:py-32 flex items-center justify-center overflow-hidden"
     >
       {/* Background image with overlay */}
       <div
@@ -33,12 +33,18 @@ export default function Hero() {
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="#servicios"
-            className="w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-xl shadow-lg shadow-accent-500/25 hover:shadow-accent-600/30 transition-all duration-200 text-center"
+            data-analytics-event="cta_click"
+            data-action="view_services"
+            data-placement="hero"
+            className="w-full sm:w-auto px-8 py-4 bg-accent-500 hover:bg-accent-600 text-primary-950 font-semibold rounded-xl shadow-lg shadow-accent-500/25 hover:shadow-accent-600/30 transition-all duration-200 text-center"
           >
             Conocer servicios
           </a>
           <a
             href="#contacto"
+            data-analytics-event="cta_click"
+            data-action="request_quote"
+            data-placement="hero"
             className="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/20 transition-all duration-200 text-center"
           >
             Solicitar presupuesto

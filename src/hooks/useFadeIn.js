@@ -8,6 +8,10 @@ export function useFadeIn() {
   const ref = useRef(null)
 
   useEffect(() => {
+    const element = ref.current
+    if (!element || !('IntersectionObserver' in window) ||
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -15,14 +19,16 @@ export function useFadeIn() {
           observer.unobserve(entry.target)
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0 }
     )
 
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
+    element.classList.add('will-animate')
+    observer.observe(element)
 
-    return () => observer.disconnect()
+    return () => {
+      observer.disconnect()
+      element.classList.remove('will-animate')
+    }
   }, [])
 
   return ref

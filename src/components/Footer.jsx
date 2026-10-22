@@ -30,6 +30,9 @@ export default function Footer() {
                 <li key={href}>
                   <a
                     href={href}
+                    data-analytics-event="navigation_click"
+                    data-section={href.slice(1)}
+                    data-placement="footer"
                     className="text-sm text-primary-300 hover:text-white transition-colors"
                   >
                     {label}
@@ -48,12 +51,12 @@ export default function Footer() {
               <p>Río de Janeiro M. 124 S. 4</p>
               <p>Lagomar, Canelones, Uruguay</p>
               <p>
-                <a href="https://wa.me/59894562495" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                <a href="https://wa.me/59894562495" data-analytics-event="contact_click" data-channel="whatsapp" data-placement="footer" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                   (+598) 94-562-495
                 </a>
               </p>
               <p>
-                <a href="mailto:infortac@adinet.com.uy" className="hover:text-white transition-colors">
+                <a href="mailto:infortac@adinet.com.uy" data-analytics-event="contact_click" data-channel="email" data-placement="footer" className="hover:text-white transition-colors">
                   infortac@adinet.com.uy
                 </a>
               </p>

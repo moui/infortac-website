@@ -1,25 +1,28 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef, useSyncExternalStore } from 'react'
 import { Menu, X } from 'lucide-react'
 
 const NAV_LINKS = [
   { label: 'Inicio', href: '#inicio' },
-  { label: 'Servicios', href: '#servicios' },
+  { label: 'Análisis de tacógrafos', href: '/analisis-de-tacografos/' },
   { label: 'Tacógrafos', href: '#tacografos' },
-  { label: 'Productos', href: '#productos' },
+  { label: 'Discos DML y bobinas BVDR', href: '/discos-de-tacografo/' },
+  { label: 'Análisis de datos GPS', href: '/analisis-de-datos-gps/' },
   { label: 'Nosotros', href: '#nosotros' },
   { label: 'Contacto', href: '#contacto' },
 ]
 
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(() => window.scrollY > 50)
-  const toggleRef = useRef(null)
+function subscribeToScroll(callback) {
+  window.addEventListener('scroll', callback, { passive: true })
+  return () => window.removeEventListener('scroll', callback)
+}
 
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50)
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+const getScrolled = () => window.scrollY > 50
+const getServerScrolled = () => false
+
+export default function Navbar({ isHome = true }) {
+  const [isOpen, setIsOpen] = useState(false)
+  const scrolled = useSyncExternalStore(subscribeToScroll, getScrolled, getServerScrolled) || !isHome
+  const toggleRef = useRef(null)
 
   return (
     <nav
@@ -40,7 +43,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <a
-            href="#inicio"
+            href={isHome ? '#inicio' : '/'}
             data-analytics-event="navigation_click"
             data-section="inicio"
             data-placement="header"
@@ -56,9 +59,9 @@ export default function Navbar() {
             {NAV_LINKS.map(({ label, href }) => (
               <a
                 key={href}
-                href={href}
+                href={href.startsWith('/') ? href : isHome ? href : `/${href}`}
                 data-analytics-event="navigation_click"
-                data-section={href.slice(1)}
+                data-section={href.startsWith('/') ? undefined : href.slice(1)}
                 data-placement="header"
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   scrolled
@@ -100,9 +103,9 @@ export default function Navbar() {
           {NAV_LINKS.map(({ label, href }) => (
             <a
               key={href}
-              href={href}
+              href={href.startsWith('/') ? href : isHome ? href : `/${href}`}
               data-analytics-event="navigation_click"
-              data-section={href.slice(1)}
+              data-section={href.startsWith('/') ? undefined : href.slice(1)}
               data-placement="header"
               onClick={() => setIsOpen(false)}
               className="block px-4 py-3 rounded-lg text-gray-700 hover:bg-primary-50 hover:text-primary-600 font-medium transition-colors"

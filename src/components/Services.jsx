@@ -16,6 +16,7 @@ const SERVICES = [
       'Archivo y resguardo organizado de discos para consultas futuras',
     ],
     highlighted: true,
+    link: '/analisis-de-tacografos/',
   },
   {
     icon: Satellite,
@@ -29,6 +30,7 @@ const SERVICES = [
       'Reportes periódicos con información relevante para la gestión',
     ],
     highlighted: false,
+    link: '/informes-de-flotas/',
   },
   {
     icon: SlidersHorizontal,
@@ -42,6 +44,7 @@ const SERVICES = [
       'Consultoría experta en optimización de costos de flota',
     ],
     highlighted: false,
+    link: '/analisis-de-datos-gps/',
   },
 ]
 
@@ -66,7 +69,7 @@ export default function Services() {
 
         {/* Service Cards */}
         <div className="grid md:grid-cols-2 gap-8">
-          {SERVICES.map(({ icon: Icon, title, description, details, highlighted }) => (
+          {SERVICES.map(({ icon: Icon, title, description, details, highlighted, link }) => (
             <div
               key={title}
               className={`group rounded-2xl p-8 shadow-sm hover:shadow-xl border transition-all duration-300 ${
@@ -104,6 +107,7 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
+              <a href={link} className="mt-6 inline-block font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">Conocé este servicio</a>
             </div>
           ))}
         </div>

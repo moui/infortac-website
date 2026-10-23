@@ -1,4 +1,4 @@
-export default function Footer() {
+export default function Footer({ isHome = true }) {
   const currentYear = new Date().getFullYear()
 
   return (
@@ -21,17 +21,19 @@ export default function Footer() {
             <ul className="space-y-2">
               {[
                 { label: 'Inicio', href: '#inicio' },
-                { label: 'Servicios', href: '#servicios' },
+                { label: 'Análisis de tacógrafos', href: '/analisis-de-tacografos/' },
                 { label: 'Tacógrafos', href: '#tacografos' },
-                { label: 'Productos', href: '#productos' },
+                { label: 'Discos DML y bobinas BVDR', href: '/discos-de-tacografo/' },
+                { label: 'Análisis de datos GPS', href: '/analisis-de-datos-gps/' },
+                { label: 'Informes de flotas', href: '/informes-de-flotas/' },
                 { label: 'Nosotros', href: '#nosotros' },
                 { label: 'Contacto', href: '#contacto' },
               ].map(({ label, href }) => (
                 <li key={href}>
                   <a
-                    href={href}
-                    data-analytics-event="navigation_click"
-                    data-section={href.slice(1)}
+                    href={href.startsWith('/') ? href : isHome ? href : `/${href}`}
+                    data-analytics-event={href.startsWith('/') ? undefined : 'navigation_click'}
+                    data-section={href.startsWith('/') ? undefined : href.slice(1)}
                     data-placement="footer"
                     className="text-sm text-primary-300 hover:text-white transition-colors"
                   >

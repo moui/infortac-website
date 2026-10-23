@@ -4,7 +4,7 @@
 
 1. Sign in at https://analytics.google.com/ using the business's Google account.
 2. Create an account/property named **Infortac**. Set the reporting time zone to **Uruguay / Montevideo** and currency to **UYU**.
-3. Add a **Web** data stream for `https://www.infortac.com`.
+3. Add a **Web** data stream for `https://www.infortac.uy`.
 4. Disable **Enhanced measurement** for this stream. The site explicitly records page views, section views and relevant clicks. Automatic form/outbound/history events would add unnecessary or duplicate events.
 5. Copy the stream's **Measurement ID**, starting with `G-`. No API secret or service-account key is needed.
 
@@ -22,7 +22,7 @@ VITE_GA_MEASUREMENT_ID=G-YOURMEASUREMENTID
 
 Alternatively, override the variable in the AWS build environment or the shell that builds the files uploaded to AWS. Vite embeds it at build time; changing an environment variable on a static host after uploading files has no effect. Rebuild and deploy `dist/` to activate a new ID. This ID is public, not a credential.
 
-Analytics only loads in production builds on `infortac.com` or `www.infortac.com`, after the visitor accepts the statistics prompt. Local development and previews on other hosts do not send data. Without a valid ID, the prompt and integration are disabled.
+Analytics only loads in production builds on `infortac.uy`, `www.infortac.uy`, `infortac.com.uy`, or `www.infortac.com.uy`, after the visitor accepts the statistics prompt. Local development and previews on other hosts do not send data. Without a valid ID, the prompt and integration are disabled.
 
 Visitors can reject or withdraw consent using **Preferencias de estadísticas** below the footer. No Google tag loads before acceptance. Withdrawal disables further tracking and removes this property's first-party GA cookies. This does not delete events already received by Google.
 

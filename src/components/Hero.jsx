@@ -2,13 +2,14 @@ import { ChevronDown } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section
+      <section
       id="inicio"
       className="relative min-h-[100svh] py-28 sm:py-32 flex items-center justify-center overflow-hidden"
     >
       {/* Background image with overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center"
+        role="presentation"
         style={{ backgroundImage: "url('/images/slide1.jpg')" }}
         aria-hidden="true"
       />

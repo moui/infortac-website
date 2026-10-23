@@ -1,6 +1,8 @@
 import { Package, Truck } from 'lucide-react'
 import { useFadeIn } from '../hooks/useFadeIn'
 
+const productAnchor = (id) => `producto-${id.toLowerCase().replace(/\s+/g, '-')}`
+
 const PRODUCTS = [
   {
     id: 'DML 001',
@@ -49,7 +51,7 @@ const PRODUCTS = [
   },
 ]
 
-export default function Products() {
+export default function Products({ showCatalogLink = true }) {
   const ref = useFadeIn()
 
   return (
@@ -73,6 +75,8 @@ export default function Products() {
           {PRODUCTS.map(({ id, name, image, scale, divisions, application, packaging }) => (
             <article
               key={id}
+              id={productAnchor(id)}
+              aria-labelledby={`${productAnchor(id)}-name`}
               className="group bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:border-primary-200 hover:shadow-lg transition-all duration-300"
             >
               <div className="aspect-[4/3] overflow-hidden bg-white flex items-center justify-center p-4">
@@ -82,6 +86,8 @@ export default function Products() {
                   className="h-full w-full object-contain group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
                   decoding="async"
+                  width={image.endsWith('.webp') ? 2000 : 300}
+                  height={image.endsWith('.webp') ? 2000 : 224}
                 />
               </div>
               <div className="p-5 sm:p-6">
@@ -91,8 +97,8 @@ export default function Products() {
                     {id}
                   </span>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900">{name}</h3>
-                <p className="mt-2 text-sm text-gray-500">{application}</p>
+                <h3 id={`${productAnchor(id)}-name`} className="text-lg font-bold text-gray-900">{name}</h3>
+                <p className="mt-2 text-sm text-gray-600">{application}</p>
 
                 {scale && (
                   <div className="mt-4 flex flex-wrap gap-2">
@@ -112,6 +118,8 @@ export default function Products() {
         </div>
 
         {/* CTA */}
+        {showCatalogLink && <a href="/discos-de-tacografo/" className="mt-10 inline-flex rounded-xl border border-primary-200 px-6 py-3 font-semibold text-primary-700 hover:bg-primary-50">Ver discos DML y bobinas BVDR</a>}
+
         <div className="mt-12 bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 sm:p-10 text-center text-white">
           <Truck className="mx-auto mb-4" size={40} />
           <h3 className="text-xl sm:text-2xl font-bold">¿Necesitás discos de tacógrafo?</h3>

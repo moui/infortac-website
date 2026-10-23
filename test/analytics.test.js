@@ -4,7 +4,7 @@ import { createAnalytics } from '../src/lib/analytics.js'
 
 function setup(options = {}) {
   const scripts = []
-  const browserWindow = { location: new URL('https://www.infortac.com/?email=private@example.com#contacto') }
+  const browserWindow = { location: new URL('https://www.infortac.uy/?email=private@example.com#contacto') }
   const browserDocument = {
     referrer: 'https://www.google.com/search?q=private',
     createElement: () => ({}),
@@ -33,7 +33,7 @@ test('accepting initializes once, denies advertising, and sends one sanitized pa
   assert.equal(scripts[0].async, true)
   assert.equal(events().length, 1)
   assert.equal(events()[0][1], 'page_view')
-  assert.equal(events()[0][2].page_location, 'https://www.infortac.com/')
+  assert.equal(events()[0][2].page_location, 'https://www.infortac.uy/')
   assert.equal(events()[0][2].page_referrer, 'https://www.google.com')
   const commands = browserWindow.dataLayer.map((command) => [...command])
   assert.equal(commands[0][2].ad_storage, 'denied')

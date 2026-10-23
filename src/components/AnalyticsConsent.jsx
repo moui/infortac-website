@@ -1,9 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useSyncExternalStore } from 'react'
 import { analytics, CONSENT_KEY, readConsent } from '../lib/siteAnalytics'
+
+const subscribe = () => () => {}
 
 export default function AnalyticsConsent() {
   const [consent, setConsent] = useState(readConsent)
   const [editing, setEditing] = useState(false)
+  const hydrated = useSyncExternalStore(subscribe, () => true, () => false)
 
   useEffect(() => {
     analytics.setConsent(consent === 'granted')
@@ -24,7 +27,8 @@ export default function AnalyticsConsent() {
     const observer = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
-          analytics.track('section_view', { section_id: entry.target.closest('section').id })
+          const section = entry.target.closest('section')
+          if (section?.id) analytics.track('section_view', { section_id: section.id })
           observer.unobserve(entry.target)
         }
       }
@@ -44,7 +48,7 @@ export default function AnalyticsConsent() {
     setEditing(false)
   }
 
-  if (!analytics.available) return null
+  if (!hydrated || !analytics.available) return null
 
   return (
     <>

@@ -56,7 +56,7 @@ export default function Tacografos() {
                 <div>
                   <h3 className="font-bold text-white">Obligatoriedad legal (MTOP)</h3>
                   <p className="mt-2 text-sm text-primary-300 leading-relaxed">
-                    Según la normativa del Ministerio de Transporte y Obras Públicas (MTOP) de Uruguay, todos los camiones y ómnibus habilitados para el transporte de carga y pasajeros están obligados a llevar tacógrafo en funcionamiento. Su uso no es opcional: es un requisito legal.
+              Los requisitos sobre el uso del tacógrafo pueden variar según el vehículo y el tipo de servicio. Consultá la normativa vigente del MTOP que corresponde a tu operación.
                   </p>
                 </div>
               </div>
@@ -84,7 +84,7 @@ export default function Tacografos() {
                 <div>
                   <h3 className="font-bold text-white">Valor documental y probatorio</h3>
                   <p className="mt-2 text-sm text-primary-300 leading-relaxed">
-                    Los discos de tacógrafo constituyen prueba documental válida en caso de accidentes de tránsito, inspecciones del MTOP y juicios laborales. Contar con discos correctamente analizados y archivados es una protección para su empresa.
+              Los discos conservan un registro de la actividad del vehículo. Analizarlos y archivarlos de forma ordenada facilita las consultas internas y permite revisar la información cuando la empresa la necesita.
                   </p>
                 </div>
               </div>

@@ -1,0 +1,42 @@
+[
+  {
+    "source": "https://infortac.uy",
+    "target": "https://www.infortac.uy",
+    "status": "301"
+  },
+  {
+    "source": "https://infortac.com.uy",
+    "target": "https://www.infortac.uy",
+    "status": "301"
+  },
+  {
+    "source": "https://www.infortac.com.uy",
+    "target": "https://www.infortac.uy",
+    "status": "301"
+  },
+  {
+    "source": "/index.html",
+    "target": "/",
+    "status": "301"
+  },
+  {
+    "source": "/services.html",
+    "target": "/analisis-de-tacografos/",
+    "status": "301"
+  },
+  {
+    "source": "/productos.html",
+    "target": "/discos-de-tacografo/",
+    "status": "301"
+  },
+  {
+    "source": "/contact.html",
+    "target": "/#contacto",
+    "status": "301"
+  },
+  {
+    "source": "/about.html",
+    "target": "/#nosotros",
+    "status": "301"
+  }
+]
